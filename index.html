@@ -44,6 +44,20 @@
         .toggle-icon:not(.collapsed)::before {
             content: "\f286"; /* Bootstrap icon: chevron-up */
         }
+        /* استایل فوتر */
+        footer {
+            background-color: #f8f9fa;
+            padding: 15px 0;
+            text-align: center;
+            color: #6c757d;
+            font-size: 14px;
+            margin-top: 20px;
+            border-top: 1px solid #e9ecef;
+        }
+        footer .bi-heart-fill {
+            color: #dc3545;
+            margin-right: 5px; /* فاصله بین آیکن قلب و متن */
+        }
     </style>
 </head>
 <body>
@@ -96,6 +110,13 @@
         });
     });
 </script>
+
+<!-- فوتر -->
+<footer>
+    <div class="container">
+        <p>تولید شده با <i class="bi bi-heart-fill"></i></p>
+    </div>
+</footer>
 
 </body>
 </html>
