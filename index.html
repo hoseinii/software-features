@@ -12,6 +12,8 @@
         body {
             background-color: #f1f5f9;
             font-family: 'Tahoma', sans-serif;
+            margin-top: 50px; /* فاصله از هدر */
+            margin-bottom: 50px; /* فاصله از فوتر */
         }
         .feature-box {
             background-color: white;
@@ -44,25 +46,61 @@
         .toggle-icon:not(.collapsed)::before {
             content: "\f286"; /* Bootstrap icon: chevron-up */
         }
+        /* استایل هدر */
+        header {
+            background-color: #f8f9fa;
+            height: 36px; /* کاهش ارتفاع برای هماهنگی با آیتم‌های لیست */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6c757d;
+            font-size: 14px;
+            border-bottom: 1px solid #e9ecef;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        header p {
+            margin: 0; /* حذف حاشیه‌های اضافی */
+        }
         /* استایل فوتر */
         footer {
             background-color: #f8f9fa;
-            padding: 15px 0;
-            text-align: center;
+            height: 36px; /* کاهش ارتفاع برای هماهنگی با آیتم‌های لیست */
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: #6c757d;
             font-size: 14px;
-            margin-top: 20px;
             border-top: 1px solid #e9ecef;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        footer p {
+            margin: 0; /* حذف حاشیه‌های اضافی */
         }
         footer .bi-heart-fill {
             color: #dc3545;
             margin-right: 5px; /* فاصله بین آیکن قلب و متن */
         }
+        /* افزایش فاصله محتوای اصلی */
+        .container {
+            padding-top: 20px; /* فاصله کمتر از هدر */
+            padding-bottom: 20px; /* فاصله کمتر از فوتر */
+        }
     </style>
 </head>
 <body>
 
-<div class="container py-5">
+<!-- هدر -->
+<header>
+    <p>از همچو تو دلداری دل برنکنم آری!</p>
+</header>
+
+<div class="container">
     <div class="feature-box">
         <h1 class="text-center"><i class="bi bi-stars"></i> امکانات کلیدی برنامه</h1>
         <ul class="list-group list-group-flush">
@@ -113,9 +151,7 @@
 
 <!-- فوتر -->
 <footer>
-    <div class="container">
-        <p>تولید شده با <i class="bi bi-heart-fill"></i></p>
-    </div>
+    <p>تولید شده با <i class="bi bi-heart-fill"></i></p>
 </footer>
 
 </body>
